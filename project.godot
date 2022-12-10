@@ -64,6 +64,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/utility/math_util.gd"
 }, {
+"base": "Button",
+"class": "menu_button",
+"language": "GDScript",
+"path": "res://scripts/gui/menu_button.gd"
+}, {
 "base": "Reference",
 "class": "puzzle_abstract",
 "language": "GDScript",
@@ -108,11 +113,6 @@ _global_script_classes=[ {
 "class": "puzzle_arithmetic_sequence",
 "language": "GDScript",
 "path": "res://scripts/utility/puzzles/puzzle_arithmetic_sequence.gd"
-}, {
-"base": "puzzle_abstract",
-"class": "puzzle_arithmetic_ultimate",
-"language": "GDScript",
-"path": "res://scripts/utility/puzzles/puzzle_arithmetic_ultimate.gd"
 }, {
 "base": "puzzle_abstract",
 "class": "puzzle_common_divisor",
@@ -286,6 +286,7 @@ _global_script_class_icons={
 "inventory": "",
 "item_stack": "",
 "math_util": "",
+"menu_button": "",
 "puzzle_abstract": "",
 "puzzle_addition": "",
 "puzzle_addition_blank": "",
@@ -295,7 +296,6 @@ _global_script_class_icons={
 "puzzle_addition_ultimate_easy": "",
 "puzzle_arithmetic_order": "",
 "puzzle_arithmetic_sequence": "",
-"puzzle_arithmetic_ultimate": "",
 "puzzle_common_divisor": "",
 "puzzle_division": "",
 "puzzle_division_blank": "",
@@ -333,7 +333,7 @@ _global_script_class_icons={
 [application]
 
 config/name="PracticeMath"
-run/main_scene="res://scenes/main_menu.tscn"
+run/main_scene="res://scenes/practice_menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -341,6 +341,7 @@ config/icon="res://icon.png"
 Log="*res://scenes/global/Log.tscn"
 game_settings="*res://scenes/global/game_settings.tscn"
 transition="*res://scenes/global/transition.tscn"
+menu_data="*res://scenes/global/menu_data.tscn"
 
 [gui]
 

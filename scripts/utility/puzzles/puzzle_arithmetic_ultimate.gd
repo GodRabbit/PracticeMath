@@ -7,7 +7,7 @@ extends puzzle_abstract
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-class_name puzzle_arithmetic_ultimate
+#class_name puzzle_arithmetic_ultimate
 
 # TODO: finish..? is this even possible?
 # A class for creating a general arithmetic problem, with n numbers

@@ -16,16 +16,19 @@ var correct_option = 0
 const EXPRESSION_CLASS_PATH = "res://scenes/gui/math_displayer/%s.tscn"
 
 #nodes:
-onready var accept_button = $accept_button
+onready var accept_button = $foot_container/accept_button
 onready var problem_label = $problem_label
 onready var options_container = $options_container
 onready var puzzle_container = $puzzle_container
+onready var another_button = $foot_container/another_button
 
 signal answer_clicked(correct)
+signal another_pressed
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	accept_button.connect("pressed", self, "on_accept_button_pressed")
+	another_button.connect("pressed", self, "on_another_button_pressed")
 
 func set_puzzle(_puzzle):
 	puzzle = _puzzle
@@ -87,3 +90,9 @@ func on_accept_button_pressed():
 			if get_node("options_container/option_button"+str(i)).pressed:
 				emit_signal("answer_clicked", false)
 				return
+
+func on_another_button_pressed():
+	puzzle.generate()
+	unpress_all_buttons()
+	update_gui()
+	emit_signal("another_pressed")

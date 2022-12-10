@@ -145,10 +145,14 @@ shortcut = SubResource( 12 )
 group = ExtResource( 2 )
 text = "option a"
 
-[node name="accept_button" type="Button" parent="."]
+[node name="foot_container" type="HBoxContainer" parent="."]
 margin_top = 294.0
-margin_right = 132.0
+margin_right = 493.0
 margin_bottom = 373.0
+
+[node name="accept_button" type="Button" parent="foot_container"]
+margin_right = 132.0
+margin_bottom = 79.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 shortcut_in_tooltip = false
@@ -158,12 +162,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="main_container" type="VBoxContainer" parent="."]
-margin_top = 600.0
+[node name="another_button" type="Button" parent="foot_container"]
+margin_left = 326.0
 margin_right = 493.0
-margin_bottom = 600.0
-custom_constants/separation = 40
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_bottom = 79.0
+text = "Another..."

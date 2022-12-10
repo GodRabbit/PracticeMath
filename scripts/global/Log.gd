@@ -1,6 +1,5 @@
 extends Node
 
-
 # copyright 2021,2022 Dor "GodRabbit" Shlush
 # this file is part of "BanishEmWithMath"
 

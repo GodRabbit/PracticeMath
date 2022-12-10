@@ -7,6 +7,8 @@ extends Node2D
 func _ready():
 	get_node(@"check_puzzle").connect("pressed", self, "on_check_puzzle_pressed")
 	get_node(@"puzzle_displayer").connect("answer_clicked", self, "on_answer_clicked")
+	
+	test_menu()
 
 
 func on_check_puzzle_pressed():
@@ -18,3 +20,6 @@ func on_answer_clicked(_correct):
 		print("Gooood JOB!")
 	else:
 		print("oh... you're wrong")
+
+func test_menu():
+	print(menu_data.get_menu_item(["fractions", "decimals", "addition"]))

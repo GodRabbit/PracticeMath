@@ -171,7 +171,11 @@ func generate():
 	
 	# pick bank:
 	var bank = []
-	var m = int(max(solution - 10, 0))
+	var m = 0
+	if solution >= 0:
+		m = int(max(solution - 10, 0))
+	else:
+		m = solution - 10
 	for i in range(m, solution + 10):
 		if i != solution:
 			bank.append(i)
